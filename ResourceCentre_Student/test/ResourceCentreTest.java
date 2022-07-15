@@ -58,7 +58,7 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void testAddChromebook() {
-		//fail("Not yet implemented");
+		//fail("Not yet implemented")
 		// write your code here 
 		// Item list is not null, so that can add a new item
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
