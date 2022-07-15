@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+	import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
@@ -60,6 +60,21 @@ public class ResourceCentreTest {
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
 		// write your code here 
+		// Item list is not null, so that can add a new item
+				assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+				
+				//Given an empty list, after adding 1 item, the size of the list is 1
+				ResourceCentre.addChromebook(chromebookList, cb1);		
+				assertEquals("Test if that Camcorder arraylist size is 1?", 1, chromebookList.size());
+				
+				//The item just added is as same as the first item of the list
+				assertSame("Test that Camcorder is added same as 1st item of the list?", cb1, chromebookList.get(0));
+				
+				//Add another item. test The size of the list is 2?
+				ResourceCentre.addChromebook(chromebookList, cb2);
+				ResourceCentre.addChromebook(chromebookList, cb3);
+				assertEquals("Test that Camcorder arraylist size is 3?", 3, chromebookList.size());
+				assertSame("Test that Camcorder is added same as 3rd item of the list?", cb3, chromebookList.get(2));
 	}
 	
 	@Test
@@ -152,6 +167,20 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		//boundary
+				assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
+				ResourceCentre.addChromebook(chromebookList, cb1);
+				//error
+				Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
+				assertFalse("Test if available Chromebook CB0011 is returned -false?", isReturned);		
+				//normal
+				ResourceCentre.addChromebook(chromebookList, cb2);
+				cb2.setIsAvailable(false);
+				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0012");
+				assertTrue("Test if loaned out Chromebook CB0012 is returned- true", isReturned);
+				//error
+				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
+				assertFalse("Test if non-existing Chromebook CB0013 is returned - false?", isReturned);
 	}
 	
 	@After
