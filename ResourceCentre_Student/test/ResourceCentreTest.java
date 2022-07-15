@@ -173,7 +173,7 @@ public class ResourceCentreTest {
 				//error
 				Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
 				assertFalse("Test if available Chromebook CB0011 is returned -false?", isReturned);		
-				//normal
+				//norma
 				ResourceCentre.addChromebook(chromebookList, cb2);
 				cb2.setIsAvailable(false);
 				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0012");
