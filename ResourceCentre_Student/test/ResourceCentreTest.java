@@ -147,7 +147,7 @@ public class ResourceCentreTest {
 	
 	@Test
 	public void testDoReturnCamcorder() {
-		//boundary
+		//boundar
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		//error
