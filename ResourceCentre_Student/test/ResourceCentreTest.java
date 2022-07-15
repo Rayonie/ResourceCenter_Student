@@ -24,7 +24,7 @@ public class ResourceCentreTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		// prepare test data
+		// prepare test datas
 		cc1 = new Camcorder("CC0011", "Nikon HDSLR", 40);
 		cc2 = new Camcorder("CC0012", "Sony DSC-RX100M7", 20);
 		cc3 = new Camcorder("CC0013", "panasoni DSC-RX100M7", 30);
