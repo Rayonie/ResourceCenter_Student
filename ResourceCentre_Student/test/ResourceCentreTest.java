@@ -79,7 +79,7 @@ public class ResourceCentreTest {
 	
 	@Test
 	public void testRetrieveAllCamcorder() {
-		// Test if Item list is not null but empty, so that can add a new ite
+		// Test if Item list is not null but empty, so that can add a new ite)
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		
 		//test if the list of camcorders retrieved from the SourceCentre is empty
